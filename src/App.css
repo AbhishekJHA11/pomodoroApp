@@ -1,0 +1,129 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  font-family: "Segoe UI", sans-serif;
+  background: #0f0f1a;
+  color: #fff;
+}
+
+/* Layout */
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #ff4e94;
+  text-shadow: 0 0 15px #ff4e94;
+}
+
+/* Timer Circle */
+.timer-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.circle {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #222239, #0f0f1a);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  border: 5px solid #444;
+  transition: 0.3s ease;
+  position: relative;
+}
+
+.circle.work {
+  box-shadow: 0 0 30px #4fd1c5, 0 0 60px #38b2ac inset;
+}
+
+.circle.break {
+  box-shadow: 0 0 30px #ff4e94, 0 0 60px #ff007c inset;
+}
+
+.time {
+  font-size: 2.8rem;
+  font-weight: bold;
+}
+
+/* Mode Label */
+.label {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #ccc;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.glow-btn {
+  padding: 10px 25px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background: #4fd1c5;
+  box-shadow: 0 0 12px #4fd1c5;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.glow-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 18px #4fd1c5, 0 0 30px #38b2ac;
+}
+
+.reset-btn {
+  padding: 10px 25px;
+  border: 2px solid #ff4e94;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ff4e94;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.reset-btn:hover {
+  background: #ff4e94;
+  color: black;
+  box-shadow: 0 0 10px #ff4e94;
+}
+
+.quote-box {
+  margin: 15px 0 25px;
+  padding: 15px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 5px solid #ff4e94;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #f0a6c1;
+  max-width: 320px;
+  text-align: center;
+  user-select: none;
+  box-shadow: 0 0 10px rgba(255, 78, 148, 0.3);
+  border-radius: 6px;
+}
